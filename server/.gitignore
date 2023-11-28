@@ -1,0 +1,6 @@
+.*
+!.gitignore
+!.eslint*
+
+
+/node_modules/
