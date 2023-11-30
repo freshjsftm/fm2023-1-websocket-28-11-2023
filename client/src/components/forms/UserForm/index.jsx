@@ -11,7 +11,7 @@ const UserForm = () => {
   };
   return (
     <Formik initialValues={{ login: '', email: '' }} onSubmit={onSubmit}>
-      <Form>
+      <Form style={{display:'flex', flexDirection: 'column'}}>
         <label>
           <span>login: </span>
           <Field name="login" />

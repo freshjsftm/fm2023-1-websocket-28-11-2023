@@ -7,9 +7,9 @@ import UserForm from '../components/forms/UserForm';
 const HomePage = () => {
   const { user } = useSelector((store) => store.user);
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div>
-        <ListMessages />
+        {!user && <ListMessages />}
         {user && <MessageForm />}
       </div>
       <div>
