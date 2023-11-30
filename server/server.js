@@ -7,7 +7,12 @@ const { WEBSOCKET_EVENTS } = require('./constants');
 const port = process.env.PORT || 3000;
 const server = http.createServer(app);
 
-const io = new Server(server);
+const io = new Server(server, {
+  transport: ['websocket'],
+  cors: {
+    origin: 'http://localhost:5000',
+  },
+});
 
 io.on('connection', (socket) => {
   console.log('a user connected');

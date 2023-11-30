@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: {
-      validator: (value) => /[a-z0-9]{3,32}/.test(value),
+      validator: (value) => /[A-Za-z0-9]{3,32}/.test(value),
       message: (props) => `${props.value} is bad login!`,
     },
   },
