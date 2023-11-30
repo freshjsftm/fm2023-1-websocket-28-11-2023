@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div>
-        {!user && <ListMessages />}
+        <ListMessages />
         {user && <MessageForm />}
       </div>
       <div>

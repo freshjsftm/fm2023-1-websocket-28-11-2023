@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Message = ({ msg }) => {
-  return <article>{JSON.stringify(msg)}</article>;
+  return <article>{msg.content} (user name)</article>;
 };
 
 export default Message;

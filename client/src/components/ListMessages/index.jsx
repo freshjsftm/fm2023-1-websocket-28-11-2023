@@ -9,16 +9,13 @@ const ListMessages = () => {
   useEffect(() => {
     dispatch(getChat()); // eslint-disable-next-line
   }, []);
+  const showList = (msg) => <Message key={msg._id} msg={msg} />;
   return (
     <section>
       <h2>List messages</h2>
       {isFetching && <h3>Loading...</h3>}
       {error && <h3>Error!!!</h3>}
-      {messages.length === 0 ? (
-        <h3>Nothing...</h3>
-      ) : (
-        messages.map((msg, i) => <Message key={i} msg={msg} />)
-      )}
+      {messages.length === 0 ? <h3>Nothing...</h3> : messages.map(showList)}
     </section>
   );
 };
