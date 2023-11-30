@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Message = ({ msg }) => {
-  return <article>{msg.content} (user name)</article>;
+  return <article>{msg.content} (({msg.userId.login}))</article>;
 };
 
 export default Message;

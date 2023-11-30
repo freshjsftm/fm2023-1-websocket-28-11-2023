@@ -8,7 +8,7 @@ const ListMessages = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getChat()); // eslint-disable-next-line
-  }, []);
+  }, [dispatch]);
   const showList = (msg) => <Message key={msg._id} msg={msg} />;
   return (
     <section>

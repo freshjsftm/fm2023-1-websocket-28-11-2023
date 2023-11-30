@@ -19,10 +19,8 @@ export const createMessage = (message) =>
   socket.emit(WEBSOCKET_EVENTS.NEW_MESSAGE, message);
 
 socket.on(WEBSOCKET_EVENTS.NEW_MESSAGE, (message) => {
-  alert('new message');
   store.dispatch(addMessage(message));
 });
 socket.on(WEBSOCKET_EVENTS.ERR_MESSAGE, (error) => {
-  alert('error');
   store.dispatch(errMessage(error));
 });
